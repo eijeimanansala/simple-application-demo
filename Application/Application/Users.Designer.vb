@@ -24,6 +24,12 @@ Partial Class Users
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.UserIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ConfirmPasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UsersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Database1DataSet = New Application.Database1DataSet()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.userstbackBtn = New System.Windows.Forms.Button()
@@ -38,17 +44,11 @@ Partial Class Users
         Me.createusersidTxt = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Database1DataSet = New Application.Database1DataSet()
-        Me.UsersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UsersTableAdapter = New Application.Database1DataSetTableAdapters.UsersTableAdapter()
-        Me.UserIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ConfirmPasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
-        CType(Me.Database1DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Database1DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -63,6 +63,44 @@ Partial Class Users
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(412, 264)
         Me.DataGridView1.TabIndex = 40
+        '
+        'UserIDDataGridViewTextBoxColumn
+        '
+        Me.UserIDDataGridViewTextBoxColumn.DataPropertyName = "UserID"
+        Me.UserIDDataGridViewTextBoxColumn.HeaderText = "UserID"
+        Me.UserIDDataGridViewTextBoxColumn.Name = "UserIDDataGridViewTextBoxColumn"
+        Me.UserIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'UsernameDataGridViewTextBoxColumn
+        '
+        Me.UsernameDataGridViewTextBoxColumn.DataPropertyName = "Username"
+        Me.UsernameDataGridViewTextBoxColumn.HeaderText = "Username"
+        Me.UsernameDataGridViewTextBoxColumn.Name = "UsernameDataGridViewTextBoxColumn"
+        Me.UsernameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'PasswordDataGridViewTextBoxColumn
+        '
+        Me.PasswordDataGridViewTextBoxColumn.DataPropertyName = "Password"
+        Me.PasswordDataGridViewTextBoxColumn.HeaderText = "Password"
+        Me.PasswordDataGridViewTextBoxColumn.Name = "PasswordDataGridViewTextBoxColumn"
+        Me.PasswordDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ConfirmPasswordDataGridViewTextBoxColumn
+        '
+        Me.ConfirmPasswordDataGridViewTextBoxColumn.DataPropertyName = "ConfirmPassword"
+        Me.ConfirmPasswordDataGridViewTextBoxColumn.HeaderText = "ConfirmPassword"
+        Me.ConfirmPasswordDataGridViewTextBoxColumn.Name = "ConfirmPasswordDataGridViewTextBoxColumn"
+        Me.ConfirmPasswordDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'UsersBindingSource
+        '
+        Me.UsersBindingSource.DataMember = "Users"
+        Me.UsersBindingSource.DataSource = Me.Database1DataSet
+        '
+        'Database1DataSet
+        '
+        Me.Database1DataSet.DataSetName = "Database1DataSet"
+        Me.Database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label6
         '
@@ -219,43 +257,9 @@ Partial Class Users
         Me.Label1.TabIndex = 30
         Me.Label1.Text = "UsersID"
         '
-        'Database1DataSet
-        '
-        Me.Database1DataSet.DataSetName = "Database1DataSet"
-        Me.Database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'UsersBindingSource
-        '
-        Me.UsersBindingSource.DataMember = "Users"
-        Me.UsersBindingSource.DataSource = Me.Database1DataSet
-        '
         'UsersTableAdapter
         '
         Me.UsersTableAdapter.ClearBeforeFill = True
-        '
-        'UserIDDataGridViewTextBoxColumn
-        '
-        Me.UserIDDataGridViewTextBoxColumn.DataPropertyName = "UserID"
-        Me.UserIDDataGridViewTextBoxColumn.HeaderText = "UserID"
-        Me.UserIDDataGridViewTextBoxColumn.Name = "UserIDDataGridViewTextBoxColumn"
-        '
-        'UsernameDataGridViewTextBoxColumn
-        '
-        Me.UsernameDataGridViewTextBoxColumn.DataPropertyName = "Username"
-        Me.UsernameDataGridViewTextBoxColumn.HeaderText = "Username"
-        Me.UsernameDataGridViewTextBoxColumn.Name = "UsernameDataGridViewTextBoxColumn"
-        '
-        'PasswordDataGridViewTextBoxColumn
-        '
-        Me.PasswordDataGridViewTextBoxColumn.DataPropertyName = "Password"
-        Me.PasswordDataGridViewTextBoxColumn.HeaderText = "Password"
-        Me.PasswordDataGridViewTextBoxColumn.Name = "PasswordDataGridViewTextBoxColumn"
-        '
-        'ConfirmPasswordDataGridViewTextBoxColumn
-        '
-        Me.ConfirmPasswordDataGridViewTextBoxColumn.DataPropertyName = "ConfirmPassword"
-        Me.ConfirmPasswordDataGridViewTextBoxColumn.HeaderText = "ConfirmPassword"
-        Me.ConfirmPasswordDataGridViewTextBoxColumn.Name = "ConfirmPasswordDataGridViewTextBoxColumn"
         '
         'Users
         '
@@ -282,10 +286,10 @@ Partial Class Users
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Users"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Database1DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.Database1DataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

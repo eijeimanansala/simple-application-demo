@@ -36,17 +36,17 @@ Partial Class Products
         Me.productcategory = New System.Windows.Forms.ComboBox()
         Me.productdeleteBtn = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ProductIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QuantityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescriptionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CategoryDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Database1DataSet = New Application.Database1DataSet()
         Me.ProductsTableAdapter = New Application.Database1DataSetTableAdapters.ProductsTableAdapter()
         Me.productquantityTxt = New System.Windows.Forms.TextBox()
         Me.productnameTxt = New System.Windows.Forms.TextBox()
         Me.productidTxt = New System.Windows.Forms.TextBox()
-        Me.ProductIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QuantityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DescriptionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CategoryDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.productmenuBtn = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,7 +58,7 @@ Partial Class Products
         '
         Me.Panel1.BackColor = System.Drawing.Color.Maroon
         Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Location = New System.Drawing.Point(0, 2)
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(823, 73)
         Me.Panel1.TabIndex = 14
@@ -204,6 +204,41 @@ Partial Class Products
         Me.DataGridView1.Size = New System.Drawing.Size(412, 264)
         Me.DataGridView1.TabIndex = 24
         '
+        'ProductIDDataGridViewTextBoxColumn
+        '
+        Me.ProductIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID"
+        Me.ProductIDDataGridViewTextBoxColumn.HeaderText = "ProductID"
+        Me.ProductIDDataGridViewTextBoxColumn.Name = "ProductIDDataGridViewTextBoxColumn"
+        Me.ProductIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ProductNameDataGridViewTextBoxColumn
+        '
+        Me.ProductNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName"
+        Me.ProductNameDataGridViewTextBoxColumn.HeaderText = "ProductName"
+        Me.ProductNameDataGridViewTextBoxColumn.Name = "ProductNameDataGridViewTextBoxColumn"
+        Me.ProductNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'QuantityDataGridViewTextBoxColumn
+        '
+        Me.QuantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity"
+        Me.QuantityDataGridViewTextBoxColumn.HeaderText = "Quantity"
+        Me.QuantityDataGridViewTextBoxColumn.Name = "QuantityDataGridViewTextBoxColumn"
+        Me.QuantityDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DescriptionDataGridViewTextBoxColumn
+        '
+        Me.DescriptionDataGridViewTextBoxColumn.DataPropertyName = "Description"
+        Me.DescriptionDataGridViewTextBoxColumn.HeaderText = "Description"
+        Me.DescriptionDataGridViewTextBoxColumn.Name = "DescriptionDataGridViewTextBoxColumn"
+        Me.DescriptionDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CategoryDataGridViewTextBoxColumn
+        '
+        Me.CategoryDataGridViewTextBoxColumn.DataPropertyName = "Category"
+        Me.CategoryDataGridViewTextBoxColumn.HeaderText = "Category"
+        Me.CategoryDataGridViewTextBoxColumn.Name = "CategoryDataGridViewTextBoxColumn"
+        Me.CategoryDataGridViewTextBoxColumn.ReadOnly = True
+        '
         'ProductsBindingSource
         '
         Me.ProductsBindingSource.DataMember = "Products"
@@ -244,41 +279,6 @@ Partial Class Products
         Me.productidTxt.Name = "productidTxt"
         Me.productidTxt.Size = New System.Drawing.Size(186, 23)
         Me.productidTxt.TabIndex = 18
-        '
-        'ProductIDDataGridViewTextBoxColumn
-        '
-        Me.ProductIDDataGridViewTextBoxColumn.DataPropertyName = "ProductID"
-        Me.ProductIDDataGridViewTextBoxColumn.HeaderText = "ProductID"
-        Me.ProductIDDataGridViewTextBoxColumn.Name = "ProductIDDataGridViewTextBoxColumn"
-        Me.ProductIDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ProductNameDataGridViewTextBoxColumn
-        '
-        Me.ProductNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName"
-        Me.ProductNameDataGridViewTextBoxColumn.HeaderText = "ProductName"
-        Me.ProductNameDataGridViewTextBoxColumn.Name = "ProductNameDataGridViewTextBoxColumn"
-        Me.ProductNameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'QuantityDataGridViewTextBoxColumn
-        '
-        Me.QuantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity"
-        Me.QuantityDataGridViewTextBoxColumn.HeaderText = "Quantity"
-        Me.QuantityDataGridViewTextBoxColumn.Name = "QuantityDataGridViewTextBoxColumn"
-        Me.QuantityDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'DescriptionDataGridViewTextBoxColumn
-        '
-        Me.DescriptionDataGridViewTextBoxColumn.DataPropertyName = "Description"
-        Me.DescriptionDataGridViewTextBoxColumn.HeaderText = "Description"
-        Me.DescriptionDataGridViewTextBoxColumn.Name = "DescriptionDataGridViewTextBoxColumn"
-        Me.DescriptionDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CategoryDataGridViewTextBoxColumn
-        '
-        Me.CategoryDataGridViewTextBoxColumn.DataPropertyName = "Category"
-        Me.CategoryDataGridViewTextBoxColumn.HeaderText = "Category"
-        Me.CategoryDataGridViewTextBoxColumn.Name = "CategoryDataGridViewTextBoxColumn"
-        Me.CategoryDataGridViewTextBoxColumn.ReadOnly = True
         '
         'productmenuBtn
         '

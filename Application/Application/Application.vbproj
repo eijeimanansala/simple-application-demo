@@ -85,6 +85,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connection.vb" />
     <Compile Include="Database1DataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

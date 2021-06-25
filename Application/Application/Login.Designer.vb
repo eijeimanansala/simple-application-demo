@@ -27,12 +27,12 @@ Partial Class Login
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.passTxt = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.usernameTxt = New System.Windows.Forms.TextBox()
+        Me.passwordTxt = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -42,9 +42,9 @@ Partial Class Login
         '
         Me.Panel1.BackColor = System.Drawing.Color.Maroon
         Me.Panel1.Controls.Add(Me.PictureBox2)
-        Me.Panel1.Location = New System.Drawing.Point(1, 2)
+        Me.Panel1.Location = New System.Drawing.Point(-5, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(410, 49)
+        Me.Panel1.Size = New System.Drawing.Size(416, 49)
         Me.Panel1.TabIndex = 0
         '
         'PictureBox2
@@ -79,22 +79,12 @@ Partial Class Login
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Password"
         '
-        'passTxt
-        '
-        Me.passTxt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.passTxt.ForeColor = System.Drawing.Color.Black
-        Me.passTxt.Location = New System.Drawing.Point(129, 246)
-        Me.passTxt.Name = "passTxt"
-        Me.passTxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
-        Me.passTxt.Size = New System.Drawing.Size(237, 23)
-        Me.passTxt.TabIndex = 2
-        '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(156, 79)
+        Me.PictureBox1.Location = New System.Drawing.Point(136, 74)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(119, 74)
+        Me.PictureBox1.Size = New System.Drawing.Size(133, 88)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
@@ -102,9 +92,9 @@ Partial Class Login
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Maroon
-        Me.Panel2.Location = New System.Drawing.Point(2, 418)
+        Me.Panel2.Location = New System.Drawing.Point(-5, 420)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(409, 32)
+        Me.Panel2.Size = New System.Drawing.Size(416, 32)
         Me.Panel2.TabIndex = 1
         '
         'btnLogin
@@ -136,11 +126,19 @@ Partial Class Login
         'usernameTxt
         '
         Me.usernameTxt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.usernameTxt.ForeColor = System.Drawing.Color.Black
-        Me.usernameTxt.Location = New System.Drawing.Point(129, 209)
+        Me.usernameTxt.Location = New System.Drawing.Point(128, 205)
         Me.usernameTxt.Name = "usernameTxt"
-        Me.usernameTxt.Size = New System.Drawing.Size(237, 23)
+        Me.usernameTxt.Size = New System.Drawing.Size(211, 23)
         Me.usernameTxt.TabIndex = 5
+        '
+        'passwordTxt
+        '
+        Me.passwordTxt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.passwordTxt.Location = New System.Drawing.Point(128, 237)
+        Me.passwordTxt.Name = "passwordTxt"
+        Me.passwordTxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
+        Me.passwordTxt.Size = New System.Drawing.Size(211, 23)
+        Me.passwordTxt.TabIndex = 5
         '
         'Login
         '
@@ -148,12 +146,12 @@ Partial Class Login
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(409, 451)
+        Me.Controls.Add(Me.passwordTxt)
         Me.Controls.Add(Me.usernameTxt)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.passTxt)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
@@ -171,11 +169,11 @@ Partial Class Login
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents passTxt As System.Windows.Forms.TextBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents btnLogin As System.Windows.Forms.Button
     Friend WithEvents btnClear As System.Windows.Forms.Button
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents usernameTxt As System.Windows.Forms.TextBox
+    Friend WithEvents passwordTxt As System.Windows.Forms.TextBox
 End Class

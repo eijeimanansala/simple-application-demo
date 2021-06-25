@@ -40,7 +40,7 @@ Partial Class MainMenu
         '
         Me.Panel1.BackColor = System.Drawing.Color.Maroon
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(-4, 2)
+        Me.Panel1.Location = New System.Drawing.Point(-4, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1041, 68)
         Me.Panel1.TabIndex = 0
@@ -62,7 +62,7 @@ Partial Class MainMenu
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Maroon
-        Me.Panel2.Location = New System.Drawing.Point(-4, 480)
+        Me.Panel2.Location = New System.Drawing.Point(-4, 481)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1041, 25)
         Me.Panel2.TabIndex = 1
@@ -122,7 +122,7 @@ Partial Class MainMenu
         Me.usersbtnCreate.Text = "Logout"
         Me.usersbtnCreate.UseVisualStyleBackColor = False
         '
-        'Menu
+        'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -136,7 +136,7 @@ Partial Class MainMenu
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Menu"
+        Me.Name = "MainMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
         Me.Panel1.ResumeLayout(False)

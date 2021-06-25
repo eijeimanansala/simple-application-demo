@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class Login
-    Dim connection As New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Desktop\Desktop\demo-project\Application\Application\Database1.mdf;Integrated Security=True")
+    Dim connection As New Connection
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
@@ -13,18 +13,18 @@ Public Class Login
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim username As String = usernameTxt.Text
-        Dim pass As String = passTxt.Text
-        Dim command As New SqlCommand("SELECT * FROM Users WHERE Username = '" & username & "', Password = '" & pass & "'", connection)
+        Dim pass As String = passwordTxt.Text
+        Dim command As New SqlCommand("SELECT * FROM Users WHERE Username = '" & username & "' and Password = '" & pass & "' ", connection.con)
         Dim sda As New SqlDataAdapter(command)
-        Dim dt As New DataTable()
+        Dim dt As New DataTable
         sda.Fill(dt)
 
-        If dt.Rows.Count() <= 1 Then
-            MessageBox.Show("Username or Password invalid")
-        Else
+        If dt.Rows.Count >= 1 Then
             MessageBox.Show("Login Successfully")
             MainMenu.Show()
             Me.Hide()
+        Else
+            MessageBox.Show("Incoreect Username and Password")
         End If
     End Sub
 End Class

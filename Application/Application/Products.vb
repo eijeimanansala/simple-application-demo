@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class Products
-    Dim connection As New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Desktop\Desktop\demo-project\Application\Application\Database1.mdf;Integrated Security=True")
+    Dim connection As New Connection
 
     Private Sub addproductBtn_Click(sender As Object, e As EventArgs) Handles addproductBtn.Click
         Dim pid As Integer = productidTxt.Text
@@ -8,15 +8,16 @@ Public Class Products
         Dim pquantity As String = productquantityTxt.Text
         Dim pdescription As String = productdescriptionTxt.Text
         Dim pcategory As String = productcategory.Text
-        connection.Open()
-        Dim command As New SqlCommand("Insert into Products values ('" & pid & "', '" & pname & "', '" & pquantity & "', '" & pdescription & "', '" & pcategory & "')", connection)
+        connection.con.Open()
+        Dim command As New SqlCommand("Insert into Products values ('" & pid & "', '" & pname & "', '" & pquantity & "', '" & pdescription & "', '" & pcategory & "')", connection.con)
         command.ExecuteNonQuery()
-        connection.Close()
+        connection.con.Close()
         MessageBox.Show("Successfully Inserted")
+        LoadDataInGrid()
 
     End Sub
     Private Sub LoadDataInGrid()
-        Dim command As New SqlCommand("Select * from Products", connection)
+        Dim command As New SqlCommand("Select * from Products", connection.con)
         Dim sda As New SqlDataAdapter(command)
         Dim dt As New DataTable
         sda.Fill(dt)
@@ -35,10 +36,10 @@ Public Class Products
         Dim pquantity As String = productquantityTxt.Text
         Dim pdescription As String = productdescriptionTxt.Text
         Dim pcategory As String = productcategory.Text
-        connection.Open()
-        Dim command As New SqlCommand("Update Products set ProductName= '" & pname & "', Quantity = '" & pquantity & "', Description = '" & pdescription & "', Category = '" & pcategory & "' WHERE ProductID = '" & pid & "' ", connection)
+        connection.con.Open()
+        Dim command As New SqlCommand("Update Products SET ProductName= '" & pname & "', Quantity = '" & pquantity & "', Description = '" & pdescription & "', Category = '" & pcategory & "' WHERE ProductID = '" & pid & "' ", connection.con)
         command.ExecuteNonQuery()
-        connection.Close()
+        connection.con.Close()
         MessageBox.Show("Successfully Updated")
         LoadDataInGrid()
     End Sub
@@ -46,12 +47,12 @@ Public Class Products
     Private Sub productdeleteBtn_Click(sender As Object, e As EventArgs) Handles productdeleteBtn.Click
         If MessageBox.Show("Are you sure do you to delete?", "Delete Document", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             Dim pid As Integer = productidTxt.Text
-            connection.Open()
-            Dim command As New SqlCommand("Delete Products where ProductID = '" & pid & "'", connection)
+            connection.con.Open()
+            Dim command As New SqlCommand("Delete Products where ProductID = '" & pid & "'", connection.con)
             command.ExecuteNonQuery()
             MessageBox.Show("Successfully Deleted")
             LoadDataInGrid()
-            connection.Close()
+            connection.con.Close()
         End If
     End Sub
 
