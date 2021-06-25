@@ -1,0 +1,17 @@
+C:\Users\Desktop\Desktop\demo-project\Application\Application\bin\Debug\Database1.mdf
+C:\Users\Desktop\Desktop\demo-project\Application\Application\bin\Debug\Database1_log.ldf
+C:\Users\Desktop\Desktop\demo-project\Application\Application\bin\Debug\Application.exe.config
+C:\Users\Desktop\Desktop\demo-project\Application\Application\bin\Debug\Application.exe
+C:\Users\Desktop\Desktop\demo-project\Application\Application\bin\Debug\Application.pdb
+C:\Users\Desktop\Desktop\demo-project\Application\Application\bin\Debug\Application.xml
+C:\Users\Desktop\Desktop\demo-project\Application\Application\obj\Debug\Application.Login.resources
+C:\Users\Desktop\Desktop\demo-project\Application\Application\obj\Debug\Application.LoginAuthentication.resources
+C:\Users\Desktop\Desktop\demo-project\Application\Application\obj\Debug\Application.Products.resources
+C:\Users\Desktop\Desktop\demo-project\Application\Application\obj\Debug\Application.Splash.resources
+C:\Users\Desktop\Desktop\demo-project\Application\Application\obj\Debug\Application.Resources.resources
+C:\Users\Desktop\Desktop\demo-project\Application\Application\obj\Debug\Application.Users.resources
+C:\Users\Desktop\Desktop\demo-project\Application\Application\obj\Debug\Application.vbproj.GenerateResource.Cache
+C:\Users\Desktop\Desktop\demo-project\Application\Application\obj\Debug\Application.exe
+C:\Users\Desktop\Desktop\demo-project\Application\Application\obj\Debug\Application.xml
+C:\Users\Desktop\Desktop\demo-project\Application\Application\obj\Debug\Application.pdb
+C:\Users\Desktop\Desktop\demo-project\Application\Application\obj\Debug\Application.MainMenu.resources
