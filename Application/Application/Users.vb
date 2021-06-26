@@ -1,6 +1,10 @@
 ﻿Imports System.Data.SqlClient
 Public Class Users
     Dim connection As New Connection
+    Dim uid As String
+    Dim uname As String
+    Dim pass As String
+    Dim confirmpass As String
 
     Private Sub Users_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'Database1DataSet.Users' table. You can move, or remove it, as needed.
@@ -15,7 +19,7 @@ Public Class Users
     End Sub
     Private Sub deleteusersBtn_Click(sender As Object, e As EventArgs) Handles deleteusersBtn.Click
         If MessageBox.Show("Are you sure do you to delete?", "Delete Document", MessageBoxButtons.YesNo) = DialogResult.Yes Then
-            Dim uid As Integer = createusersidTxt.Text
+            uid = createusersidTxt.Text
             connection.uid = uid
             connection.deleteUser()
             LoadDataInGrid()
@@ -28,7 +32,7 @@ Public Class Users
     End Sub
 
     Private Sub searchuseridBtn_Click(sender As Object, e As EventArgs) Handles searchuseridBtn.Click
-        Dim uid As String = createusersidTxt.Text
+        uid = createusersidTxt.Text
         If uid = "" Then
             Dim command As New SqlCommand("SELECT * FROM Users", connection.con)
             Dim sda As New SqlDataAdapter(command)
@@ -46,9 +50,9 @@ Public Class Users
 
     'Add user private sub class
     Private Sub addingUsers()
-        Dim uname As String = createusernameTxt.Text
-        Dim pass As String = createpasswordTxt.Text
-        Dim confirmpass As String = createconfirmpassTxt.Text
+        uname = createusernameTxt.Text
+        pass = createpasswordTxt.Text
+        confirmpass = createconfirmpassTxt.Text
 
         connection.username = uname
         connection.password = pass
@@ -63,10 +67,10 @@ Public Class Users
 
     'Update user private sub class
     Private Sub updatedUsers()
-        Dim uid As Integer = createusersidTxt.Text
-        Dim uname As String = createusernameTxt.Text
-        Dim pass As String = createpasswordTxt.Text
-        Dim confirmpass As String = createconfirmpassTxt.Text
+        uid = createusersidTxt.Text
+        uname = createusernameTxt.Text
+        pass = createpasswordTxt.Text
+        confirmpass = createconfirmpassTxt.Text
 
         connection.uid = uid
         connection.username = uname

@@ -1,6 +1,11 @@
 ﻿Imports System.Data.SqlClient
 Public Class Products
     Dim connection As New Connection
+    Dim pid As String
+    Dim pname As String
+    Dim pquantity As String
+    Dim pdescription As String
+    Dim pcategory As String
 
     Private Sub addproductBtn_Click(sender As Object, e As EventArgs) Handles addproductBtn.Click
         addProduct()
@@ -19,7 +24,7 @@ Public Class Products
 
     Private Sub productdeleteBtn_Click(sender As Object, e As EventArgs) Handles productdeleteBtn.Click
         If MessageBox.Show("Are you sure do you to delete?", "Delete Data", MessageBoxButtons.YesNo) = DialogResult.Yes Then
-            Dim pid As Integer = productidTxt.Text
+            pid = productidTxt.Text
             connection.productid = pid
             connection.deleteProduct()
             LoadDataInGrid()
@@ -33,7 +38,7 @@ Public Class Products
     End Sub
 
     Private Sub searchproductidBtn_Click(sender As Object, e As EventArgs) Handles searchproductidBtn.Click
-        Dim pid As String = productidTxt.Text
+        pid = productidTxt.Text
         If pid = "" Then
             Dim command As New SqlCommand("SELECT * FROM PRODUCTS", connection.con)
             Dim sda As New SqlDataAdapter(command)
@@ -74,11 +79,11 @@ Public Class Products
     End Sub
     'Add Product Sub Class
     Private Sub addProduct()
-        Dim pid As Integer = productidTxt.Text
-        Dim pname As String = productnameTxt.Text
-        Dim pquantity As String = productquantityTxt.Text
-        Dim pdescription As String = productdescriptionTxt.Text
-        Dim pcategory As String = productcategory.Text
+        pid = productidTxt.Text
+        pname = productnameTxt.Text
+        pquantity = productquantityTxt.Text
+        pdescription = productdescriptionTxt.Text
+        pcategory = productcategory.Text
 
         connection.productid = pid
         connection.productname = pname
@@ -96,11 +101,11 @@ Public Class Products
     End Sub
     'Update Product Sub Class
     Private Sub updatedProduct()
-        Dim pid As Integer = productidTxt.Text
-        Dim pname As String = productnameTxt.Text
-        Dim pquantity As String = productquantityTxt.Text
-        Dim pdescription As String = productdescriptionTxt.Text
-        Dim pcategory As String = productcategory.Text
+        pid = productidTxt.Text
+        pname = productnameTxt.Text
+        pquantity = productquantityTxt.Text
+        pdescription = productdescriptionTxt.Text
+        pcategory = productcategory.Text
 
         connection.productid = pid
         connection.productname = pname
