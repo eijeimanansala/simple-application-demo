@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class LoginAuthentication
     Dim connection As New Connection
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles authconfirmpassTxt.TextChanged
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles authconfirmpassTxt.TextChanged, authusernameTxt.TextChanged, authpassTxt.TextChanged
 
     End Sub
 
@@ -31,5 +31,9 @@ Public Class LoginAuthentication
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         MainMenu.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub authpassTxt_TextChanged(sender As Object, e As EventArgs)
+
     End Sub
 End Class

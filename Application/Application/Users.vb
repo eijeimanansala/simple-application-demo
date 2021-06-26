@@ -79,4 +79,12 @@ Public Class Users
             MessageBox.Show("This field will accept numbers only")
         End If
     End Sub
+
+    Private Sub createpasswordTxt_TextChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub createconfirmpassTxt_TextChanged(sender As Object, e As EventArgs) Handles createconfirmpassTxt.TextChanged, createpasswordTxt.TextChanged
+
+    End Sub
 End Class

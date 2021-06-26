@@ -27,13 +27,13 @@ Partial Class LoginAuthentication
         Me.btnBack = New System.Windows.Forms.Button()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.authpassTxt = New System.Windows.Forms.TextBox()
-        Me.authusernameTxt = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.authconfirmpassTxt = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.authpassTxt = New System.Windows.Forms.TextBox()
+        Me.authusernameTxt = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -78,25 +78,6 @@ Partial Class LoginAuthentication
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(409, 39)
         Me.Panel2.TabIndex = 6
-        '
-        'authpassTxt
-        '
-        Me.authpassTxt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authpassTxt.ForeColor = System.Drawing.Color.Black
-        Me.authpassTxt.Location = New System.Drawing.Point(174, 217)
-        Me.authpassTxt.Name = "authpassTxt"
-        Me.authpassTxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
-        Me.authpassTxt.Size = New System.Drawing.Size(186, 23)
-        Me.authpassTxt.TabIndex = 9
-        '
-        'authusernameTxt
-        '
-        Me.authusernameTxt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.authusernameTxt.ForeColor = System.Drawing.Color.Black
-        Me.authusernameTxt.Location = New System.Drawing.Point(174, 175)
-        Me.authusernameTxt.Name = "authusernameTxt"
-        Me.authusernameTxt.Size = New System.Drawing.Size(187, 23)
-        Me.authusernameTxt.TabIndex = 10
         '
         'Label2
         '
@@ -151,6 +132,25 @@ Partial Class LoginAuthentication
         Me.PictureBox1.TabIndex = 14
         Me.PictureBox1.TabStop = False
         '
+        'authpassTxt
+        '
+        Me.authpassTxt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.authpassTxt.ForeColor = System.Drawing.Color.Black
+        Me.authpassTxt.Location = New System.Drawing.Point(174, 219)
+        Me.authpassTxt.Name = "authpassTxt"
+        Me.authpassTxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
+        Me.authpassTxt.Size = New System.Drawing.Size(186, 23)
+        Me.authpassTxt.TabIndex = 9
+        '
+        'authusernameTxt
+        '
+        Me.authusernameTxt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.authusernameTxt.ForeColor = System.Drawing.Color.Black
+        Me.authusernameTxt.Location = New System.Drawing.Point(174, 177)
+        Me.authusernameTxt.Name = "authusernameTxt"
+        Me.authusernameTxt.Size = New System.Drawing.Size(186, 23)
+        Me.authusernameTxt.TabIndex = 9
+        '
         'LoginAuthentication
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -161,10 +161,10 @@ Partial Class LoginAuthentication
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.authconfirmpassTxt)
-        Me.Controls.Add(Me.authpassTxt)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.authusernameTxt)
+        Me.Controls.Add(Me.authpassTxt)
+        Me.Controls.Add(Me.authconfirmpassTxt)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -180,11 +180,11 @@ Partial Class LoginAuthentication
     Friend WithEvents btnBack As System.Windows.Forms.Button
     Friend WithEvents btnLogin As System.Windows.Forms.Button
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents authpassTxt As System.Windows.Forms.TextBox
-    Friend WithEvents authusernameTxt As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents authconfirmpassTxt As System.Windows.Forms.TextBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents authpassTxt As System.Windows.Forms.TextBox
+    Friend WithEvents authusernameTxt As System.Windows.Forms.TextBox
 End Class

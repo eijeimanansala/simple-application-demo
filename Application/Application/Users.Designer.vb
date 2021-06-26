@@ -41,15 +41,15 @@ Partial Class Users
         Me.updateusersBtn = New System.Windows.Forms.Button()
         Me.addusersBtn = New System.Windows.Forms.Button()
         Me.createconfirmpassTxt = New System.Windows.Forms.TextBox()
-        Me.createpasswordTxt = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.createusernameTxt = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.createusersidTxt = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.UsersTableAdapter = New Application.Database1DataSetTableAdapters.UsersTableAdapter()
         Me.searchuseridBtn = New System.Windows.Forms.Button()
+        Me.createusernameTxt = New System.Windows.Forms.TextBox()
+        Me.createpasswordTxt = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Database1DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -225,16 +225,6 @@ Partial Class Users
         Me.createconfirmpassTxt.Size = New System.Drawing.Size(186, 23)
         Me.createconfirmpassTxt.TabIndex = 31
         '
-        'createpasswordTxt
-        '
-        Me.createpasswordTxt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.createpasswordTxt.ForeColor = System.Drawing.Color.Black
-        Me.createpasswordTxt.Location = New System.Drawing.Point(169, 190)
-        Me.createpasswordTxt.Name = "createpasswordTxt"
-        Me.createpasswordTxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
-        Me.createpasswordTxt.Size = New System.Drawing.Size(186, 23)
-        Me.createpasswordTxt.TabIndex = 32
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -245,15 +235,6 @@ Partial Class Users
         Me.Label4.Size = New System.Drawing.Size(153, 18)
         Me.Label4.TabIndex = 27
         Me.Label4.Text = "Confirm Password"
-        '
-        'createusernameTxt
-        '
-        Me.createusernameTxt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.createusernameTxt.ForeColor = System.Drawing.Color.Black
-        Me.createusernameTxt.Location = New System.Drawing.Point(169, 152)
-        Me.createusernameTxt.Name = "createusernameTxt"
-        Me.createusernameTxt.Size = New System.Drawing.Size(186, 23)
-        Me.createusernameTxt.TabIndex = 33
         '
         'Label3
         '
@@ -314,6 +295,25 @@ Partial Class Users
         Me.searchuseridBtn.Text = "Search"
         Me.searchuseridBtn.UseVisualStyleBackColor = False
         '
+        'createusernameTxt
+        '
+        Me.createusernameTxt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.createusernameTxt.ForeColor = System.Drawing.Color.Black
+        Me.createusernameTxt.Location = New System.Drawing.Point(169, 154)
+        Me.createusernameTxt.Name = "createusernameTxt"
+        Me.createusernameTxt.Size = New System.Drawing.Size(186, 23)
+        Me.createusernameTxt.TabIndex = 31
+        '
+        'createpasswordTxt
+        '
+        Me.createpasswordTxt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.createpasswordTxt.ForeColor = System.Drawing.Color.Black
+        Me.createpasswordTxt.Location = New System.Drawing.Point(169, 188)
+        Me.createpasswordTxt.Name = "createpasswordTxt"
+        Me.createpasswordTxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
+        Me.createpasswordTxt.Size = New System.Drawing.Size(186, 23)
+        Me.createpasswordTxt.TabIndex = 31
+        '
         'Users
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -327,10 +327,10 @@ Partial Class Users
         Me.Controls.Add(Me.deleteusersBtn)
         Me.Controls.Add(Me.updateusersBtn)
         Me.Controls.Add(Me.addusersBtn)
-        Me.Controls.Add(Me.createconfirmpassTxt)
-        Me.Controls.Add(Me.createpasswordTxt)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.createusernameTxt)
+        Me.Controls.Add(Me.createpasswordTxt)
+        Me.Controls.Add(Me.createconfirmpassTxt)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.createusersidTxt)
         Me.Controls.Add(Me.Label2)
@@ -356,9 +356,7 @@ Partial Class Users
     Friend WithEvents updateusersBtn As System.Windows.Forms.Button
     Friend WithEvents addusersBtn As System.Windows.Forms.Button
     Friend WithEvents createconfirmpassTxt As System.Windows.Forms.TextBox
-    Friend WithEvents createpasswordTxt As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents createusernameTxt As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents createusersidTxt As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -371,4 +369,6 @@ Partial Class Users
     Friend WithEvents PasswordDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ConfirmPasswordDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents searchuseridBtn As System.Windows.Forms.Button
+    Friend WithEvents createusernameTxt As System.Windows.Forms.TextBox
+    Friend WithEvents createpasswordTxt As System.Windows.Forms.TextBox
 End Class
