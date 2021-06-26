@@ -8,46 +8,17 @@ Public Class Users
 
     End Sub
     Private Sub addusersBtn_Click(sender As Object, e As EventArgs) Handles addusersBtn.Click
-        Dim uname As String = createusernameTxt.Text
-        Dim pass As String = createpasswordTxt.Text
-        Dim confirmpass As String = createconfirmpassTxt.Text
-
-        If pass = confirmpass Then
-            connection.con.Open()
-            Dim command As New SqlCommand("INSERT INTO USERS VALUES ('" & uname & "', '" & pass & "', '" & confirmpass & "')", connection.con)
-            command.ExecuteNonQuery()
-            connection.con.Close()
-            MessageBox.Show("Succesfully Inserted!")
-        Else
-            MessageBox.Show("Password are not match")
-        End If
+        addingUsers()
     End Sub
     Private Sub updateusersBtn_Click(sender As Object, e As EventArgs) Handles updateusersBtn.Click
-        Dim uid As Integer = createusersidTxt.Text
-        Dim uname As String = createusernameTxt.Text
-        Dim pass As String = createpasswordTxt.Text
-        Dim confirmpass As String = createconfirmpassTxt.Text
-
-        If pass = confirmpass Then
-            connection.con.Open()
-            Dim command As New SqlCommand("UPDATE USERS SET Username = '" & uname & "', Password = '" & pass & "', ConfirmPassword = '" & confirmpass & "' WHERE UserID = '" & uid & "'", connection.con)
-            command.ExecuteNonQuery()
-            connection.con.Close()
-            MessageBox.Show("Succesfully Updated!")
-            LoadDataInGrid()
-        Else
-            MessageBox.Show("Password are not match")
-        End If
+        updatedUsers()
     End Sub
     Private Sub deleteusersBtn_Click(sender As Object, e As EventArgs) Handles deleteusersBtn.Click
         If MessageBox.Show("Are you sure do you to delete?", "Delete Document", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             Dim uid As Integer = createusersidTxt.Text
-            connection.con.Open()
-            Dim command As New SqlCommand("Delete Users where UserID = '" & uid & "'", connection.con)
-            command.ExecuteNonQuery()
-            MessageBox.Show("Successfully Deleted")
+            connection.uid = uid
+            connection.deleteUser()
             LoadDataInGrid()
-            connection.con.Close()
         End If
     End Sub
 
@@ -57,12 +28,57 @@ Public Class Users
     End Sub
 
     Private Sub searchuseridBtn_Click(sender As Object, e As EventArgs) Handles searchuseridBtn.Click
+        Dim uid As String = createusersidTxt.Text
+        If uid = "" Then
+            Dim command As New SqlCommand("SELECT * FROM Users", connection.con)
+            Dim sda As New SqlDataAdapter(command)
+            Dim dt As New DataTable
+            sda.Fill(dt)
+            DataGridView2.DataSource = dt
+        Else
+            Dim command As New SqlCommand("SELECT * FROM Users WHERE UserID = '" & uid & "'", connection.con)
+            Dim sda As New SqlDataAdapter(command)
+            Dim dt As New DataTable
+            sda.Fill(dt)
+            DataGridView2.DataSource = dt
+        End If
+    End Sub
+
+    'Add user private sub class
+    Private Sub addingUsers()
+        Dim uname As String = createusernameTxt.Text
+        Dim pass As String = createpasswordTxt.Text
+        Dim confirmpass As String = createconfirmpassTxt.Text
+
+        connection.username = uname
+        connection.password = pass
+        connection.confirmpassword = confirmpass
+
+        If pass = confirmpass Then
+            connection.addUser()
+        Else
+            MessageBox.Show("Password are not match")
+        End If
+    End Sub
+
+    'Update user private sub class
+    Private Sub updatedUsers()
         Dim uid As Integer = createusersidTxt.Text
-        Dim command As New SqlCommand("SELECT * FROM Users WHERE UserID = '" & uid & "'", connection.con)
-        Dim sda As New SqlDataAdapter(command)
-        Dim dt As New DataTable
-        sda.Fill(dt)
-        DataGridView2.DataSource = dt
+        Dim uname As String = createusernameTxt.Text
+        Dim pass As String = createpasswordTxt.Text
+        Dim confirmpass As String = createconfirmpassTxt.Text
+
+        connection.uid = uid
+        connection.username = uname
+        connection.password = pass
+        connection.confirmpassword = confirmpass
+
+        If connection.password = connection.confirmpassword Then
+            connection.updateUser()
+            LoadDataInGrid()
+        Else
+            MessageBox.Show("Password are not match")
+        End If
     End Sub
 
     Private Sub LoadDataInGrid()
