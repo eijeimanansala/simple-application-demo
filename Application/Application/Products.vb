@@ -9,7 +9,7 @@ Public Class Products
         Dim pdescription As String = productdescriptionTxt.Text
         Dim pcategory As String = productcategory.Text
         connection.con.Open()
-        Dim command As New SqlCommand("Insert into Products values ('" & pid & "', '" & pname & "', '" & pquantity & "', '" & pdescription & "', '" & pcategory & "')", connection.con)
+        Dim command As New SqlCommand("Insert into Products Values ('" & pid & "', '" & pname & "', '" & pquantity & "', '" & pdescription & "', '" & pcategory & "')", connection.con)
         command.ExecuteNonQuery()
         connection.con.Close()
         MessageBox.Show("Successfully Inserted")
@@ -58,6 +58,6 @@ Public Class Products
 
     Private Sub productmenuBtn_Click(sender As Object, e As EventArgs) Handles productmenuBtn.Click
         MainMenu.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 End Class

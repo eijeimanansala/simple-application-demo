@@ -60,6 +60,6 @@ Public Class Users
 
     Private Sub userstbackBtn_Click(sender As Object, e As EventArgs) Handles userstbackBtn.Click
         MainMenu.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 End Class

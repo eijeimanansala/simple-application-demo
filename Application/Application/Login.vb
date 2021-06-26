@@ -22,9 +22,14 @@ Public Class Login
         If dt.Rows.Count >= 1 Then
             MessageBox.Show("Login Successfully")
             MainMenu.Show()
-            Me.Hide()
+            Me.Close()
         Else
             MessageBox.Show("Incoreect Username and Password")
         End If
+    End Sub
+
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        usernameTxt.Text = ""
+        passwordTxt.Text = ""
     End Sub
 End Class
