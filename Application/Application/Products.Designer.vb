@@ -48,6 +48,7 @@ Partial Class Products
         Me.productnameTxt = New System.Windows.Forms.TextBox()
         Me.productidTxt = New System.Windows.Forms.TextBox()
         Me.productmenuBtn = New System.Windows.Forms.Button()
+        Me.searchproductidBtn = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,17 +61,17 @@ Partial Class Products
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(823, 73)
+        Me.Panel1.Size = New System.Drawing.Size(934, 73)
         Me.Panel1.TabIndex = 14
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(243, 14)
+        Me.Label6.Location = New System.Drawing.Point(302, 14)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(330, 44)
+        Me.Label6.Size = New System.Drawing.Size(365, 48)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Food Inventory Mangement System" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Add Products" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -81,7 +82,7 @@ Partial Class Products
         Me.updateproductBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.updateproductBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.updateproductBtn.ForeColor = System.Drawing.Color.White
-        Me.updateproductBtn.Location = New System.Drawing.Point(177, 342)
+        Me.updateproductBtn.Location = New System.Drawing.Point(195, 342)
         Me.updateproductBtn.Name = "updateproductBtn"
         Me.updateproductBtn.Size = New System.Drawing.Size(75, 28)
         Me.updateproductBtn.TabIndex = 21
@@ -94,7 +95,7 @@ Partial Class Products
         Me.addproductBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.addproductBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.addproductBtn.ForeColor = System.Drawing.Color.White
-        Me.addproductBtn.Location = New System.Drawing.Point(66, 342)
+        Me.addproductBtn.Location = New System.Drawing.Point(93, 342)
         Me.addproductBtn.Name = "addproductBtn"
         Me.addproductBtn.Size = New System.Drawing.Size(75, 28)
         Me.addproductBtn.TabIndex = 22
@@ -182,7 +183,7 @@ Partial Class Products
         Me.productdeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.productdeleteBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.productdeleteBtn.ForeColor = System.Drawing.Color.White
-        Me.productdeleteBtn.Location = New System.Drawing.Point(281, 342)
+        Me.productdeleteBtn.Location = New System.Drawing.Point(294, 342)
         Me.productdeleteBtn.Name = "productdeleteBtn"
         Me.productdeleteBtn.Size = New System.Drawing.Size(75, 28)
         Me.productdeleteBtn.TabIndex = 21
@@ -198,10 +199,10 @@ Partial Class Products
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductIDDataGridViewTextBoxColumn, Me.ProductNameDataGridViewTextBoxColumn, Me.QuantityDataGridViewTextBoxColumn, Me.DescriptionDataGridViewTextBoxColumn, Me.CategoryDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.ProductsBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(389, 126)
+        Me.DataGridView1.Location = New System.Drawing.Point(468, 126)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(412, 264)
+        Me.DataGridView1.Size = New System.Drawing.Size(443, 264)
         Me.DataGridView1.TabIndex = 24
         '
         'ProductIDDataGridViewTextBoxColumn
@@ -286,19 +287,33 @@ Partial Class Products
         Me.productmenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.productmenuBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.productmenuBtn.ForeColor = System.Drawing.Color.White
-        Me.productmenuBtn.Location = New System.Drawing.Point(153, 403)
+        Me.productmenuBtn.Location = New System.Drawing.Point(167, 399)
         Me.productmenuBtn.Name = "productmenuBtn"
         Me.productmenuBtn.Size = New System.Drawing.Size(145, 40)
         Me.productmenuBtn.TabIndex = 25
         Me.productmenuBtn.Text = "Back to Menu"
         Me.productmenuBtn.UseVisualStyleBackColor = False
         '
+        'searchproductidBtn
+        '
+        Me.searchproductidBtn.BackColor = System.Drawing.Color.Maroon
+        Me.searchproductidBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.searchproductidBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.searchproductidBtn.ForeColor = System.Drawing.Color.White
+        Me.searchproductidBtn.Location = New System.Drawing.Point(372, 147)
+        Me.searchproductidBtn.Name = "searchproductidBtn"
+        Me.searchproductidBtn.Size = New System.Drawing.Size(78, 32)
+        Me.searchproductidBtn.TabIndex = 26
+        Me.searchproductidBtn.Text = "Search"
+        Me.searchproductidBtn.UseVisualStyleBackColor = False
+        '
         'Products
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(822, 493)
+        Me.ClientSize = New System.Drawing.Size(936, 493)
+        Me.Controls.Add(Me.searchproductidBtn)
         Me.Controls.Add(Me.productmenuBtn)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.productcategory)
@@ -353,4 +368,5 @@ Partial Class Products
     Friend WithEvents DescriptionDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents CategoryDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents productmenuBtn As System.Windows.Forms.Button
+    Friend WithEvents searchproductidBtn As System.Windows.Forms.Button
 End Class

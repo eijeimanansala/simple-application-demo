@@ -13,6 +13,11 @@ Public Class Products
         command.ExecuteNonQuery()
         connection.con.Close()
         MessageBox.Show("Successfully Inserted")
+        productidTxt.Text = ""
+        productnameTxt.Text = ""
+        productquantityTxt.Text = ""
+        productdescriptionTxt.Text = ""
+        productcategory.Text = ""
         LoadDataInGrid()
 
     End Sub
@@ -41,11 +46,16 @@ Public Class Products
         command.ExecuteNonQuery()
         connection.con.Close()
         MessageBox.Show("Successfully Updated")
+        productidTxt.Text = ""
+        productnameTxt.Text = ""
+        productquantityTxt.Text = ""
+        productdescriptionTxt.Text = ""
+        productcategory.Text = ""
         LoadDataInGrid()
     End Sub
 
     Private Sub productdeleteBtn_Click(sender As Object, e As EventArgs) Handles productdeleteBtn.Click
-        If MessageBox.Show("Are you sure do you to delete?", "Delete Document", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+        If MessageBox.Show("Are you sure do you to delete?", "Delete Data", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             Dim pid As Integer = productidTxt.Text
             connection.con.Open()
             Dim command As New SqlCommand("Delete Products where ProductID = '" & pid & "'", connection.con)
@@ -59,5 +69,14 @@ Public Class Products
     Private Sub productmenuBtn_Click(sender As Object, e As EventArgs) Handles productmenuBtn.Click
         MainMenu.Show()
         Me.Close()
+    End Sub
+
+    Private Sub searchproductidBtn_Click(sender As Object, e As EventArgs) Handles searchproductidBtn.Click
+        Dim pid As Integer = productidTxt.Text
+        Dim command As New SqlCommand("SELECT * FROM PRODUCTS WHERE ProductID = '" & pid & "' ", connection.con)
+        Dim sda As New SqlDataAdapter(command)
+        Dim dt As New DataTable
+        sda.Fill(dt)
+        DataGridView1.DataSource = dt
     End Sub
 End Class

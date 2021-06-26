@@ -22,13 +22,6 @@ Public Class Users
             MessageBox.Show("Password are not match")
         End If
     End Sub
-    Private Sub LoadDataInGrid()
-        Dim command As New SqlCommand("Select * from Users", connection.con)
-        Dim sda As New SqlDataAdapter(command)
-        Dim dt As New DataTable
-        sda.Fill(dt)
-        DataGridView1.DataSource = dt
-    End Sub
     Private Sub updateusersBtn_Click(sender As Object, e As EventArgs) Handles updateusersBtn.Click
         Dim uid As Integer = createusersidTxt.Text
         Dim uname As String = createusernameTxt.Text
@@ -61,5 +54,22 @@ Public Class Users
     Private Sub userstbackBtn_Click(sender As Object, e As EventArgs) Handles userstbackBtn.Click
         MainMenu.Show()
         Me.Close()
+    End Sub
+
+    Private Sub searchuseridBtn_Click(sender As Object, e As EventArgs) Handles searchuseridBtn.Click
+        Dim uid As Integer = createusersidTxt.Text
+        Dim command As New SqlCommand("SELECT * FROM Users WHERE UserID = '" & uid & "'", connection.con)
+        Dim sda As New SqlDataAdapter(command)
+        Dim dt As New DataTable
+        sda.Fill(dt)
+        DataGridView2.DataSource = dt
+    End Sub
+
+    Private Sub LoadDataInGrid()
+        Dim command As New SqlCommand("Select * from Users", connection.con)
+        Dim sda As New SqlDataAdapter(command)
+        Dim dt As New DataTable
+        sda.Fill(dt)
+        DataGridView2.DataSource = dt
     End Sub
 End Class
