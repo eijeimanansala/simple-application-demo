@@ -72,4 +72,11 @@ Public Class Users
         sda.Fill(dt)
         DataGridView2.DataSource = dt
     End Sub
+
+    Private Sub createusersidTxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles createusersidTxt.KeyPress
+        If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.Space) Then
+            e.Handled = True
+            MessageBox.Show("This field will accept numbers only")
+        End If
+    End Sub
 End Class

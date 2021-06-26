@@ -23,6 +23,10 @@ Partial Class Products
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.updateproductBtn = New System.Windows.Forms.Button()
@@ -61,7 +65,7 @@ Partial Class Products
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(934, 73)
+        Me.Panel1.Size = New System.Drawing.Size(993, 73)
         Me.Panel1.TabIndex = 14
         '
         'Label6
@@ -82,7 +86,7 @@ Partial Class Products
         Me.updateproductBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.updateproductBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.updateproductBtn.ForeColor = System.Drawing.Color.White
-        Me.updateproductBtn.Location = New System.Drawing.Point(195, 342)
+        Me.updateproductBtn.Location = New System.Drawing.Point(195, 328)
         Me.updateproductBtn.Name = "updateproductBtn"
         Me.updateproductBtn.Size = New System.Drawing.Size(75, 28)
         Me.updateproductBtn.TabIndex = 21
@@ -95,7 +99,7 @@ Partial Class Products
         Me.addproductBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.addproductBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.addproductBtn.ForeColor = System.Drawing.Color.White
-        Me.addproductBtn.Location = New System.Drawing.Point(93, 342)
+        Me.addproductBtn.Location = New System.Drawing.Point(93, 328)
         Me.addproductBtn.Name = "addproductBtn"
         Me.addproductBtn.Size = New System.Drawing.Size(75, 28)
         Me.addproductBtn.TabIndex = 22
@@ -107,7 +111,7 @@ Partial Class Products
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Maroon
-        Me.Label3.Location = New System.Drawing.Point(45, 225)
+        Me.Label3.Location = New System.Drawing.Point(45, 211)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(76, 18)
         Me.Label3.TabIndex = 15
@@ -118,7 +122,7 @@ Partial Class Products
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Maroon
-        Me.Label2.Location = New System.Drawing.Point(26, 187)
+        Me.Label2.Location = New System.Drawing.Point(26, 173)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(122, 18)
         Me.Label2.TabIndex = 16
@@ -129,7 +133,7 @@ Partial Class Products
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Maroon
-        Me.Label1.Location = New System.Drawing.Point(41, 149)
+        Me.Label1.Location = New System.Drawing.Point(41, 135)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(89, 18)
         Me.Label1.TabIndex = 17
@@ -140,7 +144,7 @@ Partial Class Products
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Maroon
-        Me.Label4.Location = New System.Drawing.Point(31, 256)
+        Me.Label4.Location = New System.Drawing.Point(31, 242)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(100, 18)
         Me.Label4.TabIndex = 15
@@ -150,7 +154,7 @@ Partial Class Products
         '
         Me.productdescriptionTxt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.productdescriptionTxt.ForeColor = System.Drawing.Color.Black
-        Me.productdescriptionTxt.Location = New System.Drawing.Point(177, 254)
+        Me.productdescriptionTxt.Location = New System.Drawing.Point(177, 240)
         Me.productdescriptionTxt.Name = "productdescriptionTxt"
         Me.productdescriptionTxt.Size = New System.Drawing.Size(186, 23)
         Me.productdescriptionTxt.TabIndex = 18
@@ -160,7 +164,7 @@ Partial Class Products
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Maroon
-        Me.Label5.Location = New System.Drawing.Point(41, 288)
+        Me.Label5.Location = New System.Drawing.Point(41, 274)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(82, 18)
         Me.Label5.TabIndex = 15
@@ -172,7 +176,7 @@ Partial Class Products
         Me.productcategory.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.productcategory.FormattingEnabled = True
         Me.productcategory.Items.AddRange(New Object() {"Fish", "Meat", "Vegetables", "Fruits"})
-        Me.productcategory.Location = New System.Drawing.Point(177, 287)
+        Me.productcategory.Location = New System.Drawing.Point(177, 273)
         Me.productcategory.Name = "productcategory"
         Me.productcategory.Size = New System.Drawing.Size(187, 23)
         Me.productcategory.TabIndex = 23
@@ -183,7 +187,7 @@ Partial Class Products
         Me.productdeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.productdeleteBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.productdeleteBtn.ForeColor = System.Drawing.Color.White
-        Me.productdeleteBtn.Location = New System.Drawing.Point(294, 342)
+        Me.productdeleteBtn.Location = New System.Drawing.Point(294, 328)
         Me.productdeleteBtn.Name = "productdeleteBtn"
         Me.productdeleteBtn.Size = New System.Drawing.Size(75, 28)
         Me.productdeleteBtn.TabIndex = 21
@@ -195,14 +199,47 @@ Partial Class Products
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight
+        Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
+        Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridView1.ColumnHeadersHeight = 30
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductIDDataGridViewTextBoxColumn, Me.ProductNameDataGridViewTextBoxColumn, Me.QuantityDataGridViewTextBoxColumn, Me.DescriptionDataGridViewTextBoxColumn, Me.CategoryDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.ProductsBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(468, 126)
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridView1.EnableHeadersVisualStyles = False
+        Me.DataGridView1.Location = New System.Drawing.Point(468, 116)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(443, 264)
+        Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.DataGridView1.RowHeadersVisible = False
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.DataGridView1.Size = New System.Drawing.Size(494, 264)
         Me.DataGridView1.TabIndex = 24
         '
         'ProductIDDataGridViewTextBoxColumn
@@ -258,7 +295,7 @@ Partial Class Products
         '
         Me.productquantityTxt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.productquantityTxt.ForeColor = System.Drawing.Color.Black
-        Me.productquantityTxt.Location = New System.Drawing.Point(177, 225)
+        Me.productquantityTxt.Location = New System.Drawing.Point(177, 211)
         Me.productquantityTxt.Name = "productquantityTxt"
         Me.productquantityTxt.Size = New System.Drawing.Size(186, 23)
         Me.productquantityTxt.TabIndex = 18
@@ -267,7 +304,7 @@ Partial Class Products
         '
         Me.productnameTxt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.productnameTxt.ForeColor = System.Drawing.Color.Black
-        Me.productnameTxt.Location = New System.Drawing.Point(177, 187)
+        Me.productnameTxt.Location = New System.Drawing.Point(177, 173)
         Me.productnameTxt.Name = "productnameTxt"
         Me.productnameTxt.Size = New System.Drawing.Size(186, 23)
         Me.productnameTxt.TabIndex = 18
@@ -276,7 +313,7 @@ Partial Class Products
         '
         Me.productidTxt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.productidTxt.ForeColor = System.Drawing.Color.Black
-        Me.productidTxt.Location = New System.Drawing.Point(177, 149)
+        Me.productidTxt.Location = New System.Drawing.Point(177, 135)
         Me.productidTxt.Name = "productidTxt"
         Me.productidTxt.Size = New System.Drawing.Size(186, 23)
         Me.productidTxt.TabIndex = 18
@@ -287,7 +324,7 @@ Partial Class Products
         Me.productmenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.productmenuBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.productmenuBtn.ForeColor = System.Drawing.Color.White
-        Me.productmenuBtn.Location = New System.Drawing.Point(167, 399)
+        Me.productmenuBtn.Location = New System.Drawing.Point(167, 385)
         Me.productmenuBtn.Name = "productmenuBtn"
         Me.productmenuBtn.Size = New System.Drawing.Size(145, 40)
         Me.productmenuBtn.TabIndex = 25
@@ -300,7 +337,7 @@ Partial Class Products
         Me.searchproductidBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.searchproductidBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.searchproductidBtn.ForeColor = System.Drawing.Color.White
-        Me.searchproductidBtn.Location = New System.Drawing.Point(372, 147)
+        Me.searchproductidBtn.Location = New System.Drawing.Point(372, 133)
         Me.searchproductidBtn.Name = "searchproductidBtn"
         Me.searchproductidBtn.Size = New System.Drawing.Size(78, 32)
         Me.searchproductidBtn.TabIndex = 26
@@ -312,7 +349,7 @@ Partial Class Products
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(936, 493)
+        Me.ClientSize = New System.Drawing.Size(990, 475)
         Me.Controls.Add(Me.searchproductidBtn)
         Me.Controls.Add(Me.productmenuBtn)
         Me.Controls.Add(Me.DataGridView1)

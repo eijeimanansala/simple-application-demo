@@ -79,4 +79,28 @@ Public Class Products
         sda.Fill(dt)
         DataGridView1.DataSource = dt
     End Sub
+
+    Private Sub productidTxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles productidTxt.KeyPress
+        If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.Space) Then
+            e.Handled = True
+            MessageBox.Show("This field will accept numbers only")
+        End If
+    End Sub
+
+    Private Sub productquantityTxt_KeyPress(sender As Object, e As KeyPressEventArgs) Handles productquantityTxt.KeyPress
+        If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.Space) Then
+            e.Handled = True
+            MessageBox.Show("This field will accept numbers only")
+        End If
+    End Sub
+
+    Private Sub productnameTxt_TextChanged(sender As Object, e As EventArgs) Handles productnameTxt.TextChanged
+        productnameTxt.Text = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(productnameTxt.Text)
+        productnameTxt.Select(productnameTxt.Text.Length, 0)
+    End Sub
+
+    Private Sub productdescriptionTxt_TextChanged(sender As Object, e As EventArgs) Handles productdescriptionTxt.TextChanged
+        productdescriptionTxt.Text = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(productdescriptionTxt.Text)
+        productdescriptionTxt.Select(productdescriptionTxt.Text.Length, 0)
+    End Sub
 End Class

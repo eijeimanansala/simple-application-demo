@@ -74,9 +74,9 @@ Partial Class LoginAuthentication
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Maroon
-        Me.Panel2.Location = New System.Drawing.Point(-8, 409)
+        Me.Panel2.Location = New System.Drawing.Point(-8, 410)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(409, 32)
+        Me.Panel2.Size = New System.Drawing.Size(409, 39)
         Me.Panel2.TabIndex = 6
         '
         'authpassTxt

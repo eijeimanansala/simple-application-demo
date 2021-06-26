@@ -23,6 +23,10 @@ Partial Class Users
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.UserIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -54,15 +58,50 @@ Partial Class Users
         '
         'DataGridView2
         '
+        Me.DataGridView2.AllowUserToAddRows = False
         Me.DataGridView2.AllowUserToDeleteRows = False
         Me.DataGridView2.AutoGenerateColumns = False
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLight
+        Me.DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical
+        Me.DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridView2.ColumnHeadersHeight = 30
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.UserIDDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.PasswordDataGridViewTextBoxColumn, Me.ConfirmPasswordDataGridViewTextBoxColumn})
         Me.DataGridView2.DataSource = Me.UsersBindingSource
-        Me.DataGridView2.Location = New System.Drawing.Point(381, 124)
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView2.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridView2.EnableHeadersVisualStyles = False
+        Me.DataGridView2.Location = New System.Drawing.Point(381, 106)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
-        Me.DataGridView2.Size = New System.Drawing.Size(412, 264)
+        Me.DataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.DataGridView2.RowHeadersVisible = False
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.DataGridView2.Size = New System.Drawing.Size(403, 264)
         Me.DataGridView2.TabIndex = 40
         '
         'UserIDDataGridViewTextBoxColumn
@@ -121,7 +160,7 @@ Partial Class Users
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Location = New System.Drawing.Point(-8, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(823, 73)
+        Me.Panel1.Size = New System.Drawing.Size(821, 73)
         Me.Panel1.TabIndex = 25
         '
         'userstbackBtn
@@ -130,7 +169,7 @@ Partial Class Users
         Me.userstbackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.userstbackBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.userstbackBtn.ForeColor = System.Drawing.Color.White
-        Me.userstbackBtn.Location = New System.Drawing.Point(157, 354)
+        Me.userstbackBtn.Location = New System.Drawing.Point(157, 336)
         Me.userstbackBtn.Name = "userstbackBtn"
         Me.userstbackBtn.Size = New System.Drawing.Size(112, 32)
         Me.userstbackBtn.TabIndex = 35
@@ -143,7 +182,7 @@ Partial Class Users
         Me.deleteusersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.deleteusersBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.deleteusersBtn.ForeColor = System.Drawing.Color.White
-        Me.deleteusersBtn.Location = New System.Drawing.Point(273, 297)
+        Me.deleteusersBtn.Location = New System.Drawing.Point(273, 279)
         Me.deleteusersBtn.Name = "deleteusersBtn"
         Me.deleteusersBtn.Size = New System.Drawing.Size(75, 28)
         Me.deleteusersBtn.TabIndex = 36
@@ -156,7 +195,7 @@ Partial Class Users
         Me.updateusersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.updateusersBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.updateusersBtn.ForeColor = System.Drawing.Color.White
-        Me.updateusersBtn.Location = New System.Drawing.Point(169, 297)
+        Me.updateusersBtn.Location = New System.Drawing.Point(169, 279)
         Me.updateusersBtn.Name = "updateusersBtn"
         Me.updateusersBtn.Size = New System.Drawing.Size(75, 28)
         Me.updateusersBtn.TabIndex = 37
@@ -169,7 +208,7 @@ Partial Class Users
         Me.addusersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.addusersBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.addusersBtn.ForeColor = System.Drawing.Color.White
-        Me.addusersBtn.Location = New System.Drawing.Point(58, 297)
+        Me.addusersBtn.Location = New System.Drawing.Point(58, 279)
         Me.addusersBtn.Name = "addusersBtn"
         Me.addusersBtn.Size = New System.Drawing.Size(75, 28)
         Me.addusersBtn.TabIndex = 38
@@ -180,7 +219,7 @@ Partial Class Users
         '
         Me.createconfirmpassTxt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.createconfirmpassTxt.ForeColor = System.Drawing.Color.Black
-        Me.createconfirmpassTxt.Location = New System.Drawing.Point(169, 239)
+        Me.createconfirmpassTxt.Location = New System.Drawing.Point(169, 221)
         Me.createconfirmpassTxt.Name = "createconfirmpassTxt"
         Me.createconfirmpassTxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.createconfirmpassTxt.Size = New System.Drawing.Size(186, 23)
@@ -190,7 +229,7 @@ Partial Class Users
         '
         Me.createpasswordTxt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.createpasswordTxt.ForeColor = System.Drawing.Color.Black
-        Me.createpasswordTxt.Location = New System.Drawing.Point(169, 208)
+        Me.createpasswordTxt.Location = New System.Drawing.Point(169, 190)
         Me.createpasswordTxt.Name = "createpasswordTxt"
         Me.createpasswordTxt.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.createpasswordTxt.Size = New System.Drawing.Size(186, 23)
@@ -201,7 +240,7 @@ Partial Class Users
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Maroon
-        Me.Label4.Location = New System.Drawing.Point(10, 241)
+        Me.Label4.Location = New System.Drawing.Point(10, 223)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(153, 18)
         Me.Label4.TabIndex = 27
@@ -211,7 +250,7 @@ Partial Class Users
         '
         Me.createusernameTxt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.createusernameTxt.ForeColor = System.Drawing.Color.Black
-        Me.createusernameTxt.Location = New System.Drawing.Point(169, 170)
+        Me.createusernameTxt.Location = New System.Drawing.Point(169, 152)
         Me.createusernameTxt.Name = "createusernameTxt"
         Me.createusernameTxt.Size = New System.Drawing.Size(186, 23)
         Me.createusernameTxt.TabIndex = 33
@@ -221,7 +260,7 @@ Partial Class Users
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Maroon
-        Me.Label3.Location = New System.Drawing.Point(37, 210)
+        Me.Label3.Location = New System.Drawing.Point(37, 192)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(87, 18)
         Me.Label3.TabIndex = 28
@@ -231,7 +270,7 @@ Partial Class Users
         '
         Me.createusersidTxt.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.createusersidTxt.ForeColor = System.Drawing.Color.Black
-        Me.createusersidTxt.Location = New System.Drawing.Point(529, 406)
+        Me.createusersidTxt.Location = New System.Drawing.Point(529, 388)
         Me.createusersidTxt.Name = "createusersidTxt"
         Me.createusersidTxt.Size = New System.Drawing.Size(64, 23)
         Me.createusersidTxt.TabIndex = 34
@@ -241,7 +280,7 @@ Partial Class Users
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Maroon
-        Me.Label2.Location = New System.Drawing.Point(36, 172)
+        Me.Label2.Location = New System.Drawing.Point(36, 154)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(90, 18)
         Me.Label2.TabIndex = 29
@@ -252,7 +291,7 @@ Partial Class Users
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Maroon
-        Me.Label1.Location = New System.Drawing.Point(448, 408)
+        Me.Label1.Location = New System.Drawing.Point(448, 390)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(72, 18)
         Me.Label1.TabIndex = 30
@@ -268,7 +307,7 @@ Partial Class Users
         Me.searchuseridBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.searchuseridBtn.Font = New System.Drawing.Font("Arial Rounded MT Bold", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.searchuseridBtn.ForeColor = System.Drawing.Color.White
-        Me.searchuseridBtn.Location = New System.Drawing.Point(608, 403)
+        Me.searchuseridBtn.Location = New System.Drawing.Point(608, 385)
         Me.searchuseridBtn.Name = "searchuseridBtn"
         Me.searchuseridBtn.Size = New System.Drawing.Size(87, 30)
         Me.searchuseridBtn.TabIndex = 41
@@ -280,7 +319,7 @@ Partial Class Users
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(806, 459)
+        Me.ClientSize = New System.Drawing.Size(806, 456)
         Me.Controls.Add(Me.searchuseridBtn)
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.Panel1)
