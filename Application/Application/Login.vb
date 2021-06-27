@@ -32,4 +32,13 @@ Public Class Login
         usernameTxt.Text = ""
         passwordTxt.Text = ""
     End Sub
+
+    Private Sub passwordTxt_KeyDown(sender As Object, e As KeyEventArgs) Handles passwordTxt.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            btnLogin_Click(Nothing, Nothing)
+        Else
+            Exit Sub
+        End If
+        e.SuppressKeyPress = True
+    End Sub
 End Class

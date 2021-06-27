@@ -93,11 +93,11 @@ Public Class Products
 
         connection.createProduct()
 
-        productidTxt.Text = ""
-        productnameTxt.Text = ""
-        productquantityTxt.Text = ""
-        productdescriptionTxt.Text = ""
-        productcategory.Text = ""
+        productidTxt.Clear()
+        productnameTxt.Clear()
+        productquantityTxt.Clear()
+        productdescriptionTxt.Clear()
+        productcategory.Items.Clear()
     End Sub
     'Update Product Sub Class
     Private Sub updatedProduct()
@@ -114,11 +114,11 @@ Public Class Products
         connection.productcategory = pcategory
         connection.updateProduct()
 
-        productidTxt.Text = ""
-        productnameTxt.Text = ""
-        productquantityTxt.Text = ""
-        productdescriptionTxt.Text = ""
-        productcategory.Text = ""
+        productidTxt.Clear()
+        productnameTxt.Clear()
+        productquantityTxt.Clear()
+        productdescriptionTxt.Clear()
+        productcategory.Items.Clear()
     End Sub
     'Load Data in Grind sub class
     Private Sub LoadDataInGrid()
