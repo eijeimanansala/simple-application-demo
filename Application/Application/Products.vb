@@ -28,7 +28,7 @@ Public Class Products
             connection.productid = pid
             connection.deleteProduct()
             LoadDataInGrid()
-            productidTxt.Text = ""
+            productidTxt.Clear()
         End If
     End Sub
 
@@ -127,5 +127,14 @@ Public Class Products
         Dim dt As New DataTable
         sda.Fill(dt)
         DataGridView1.DataSource = dt
+    End Sub
+
+    Private Sub productidTxt_KeyDown(sender As Object, e As KeyEventArgs) Handles productidTxt.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            searchproductidBtn_Click(Nothing, Nothing)
+        Else
+            Exit Sub
+        End If
+        e.SuppressKeyPress = True
     End Sub
 End Class

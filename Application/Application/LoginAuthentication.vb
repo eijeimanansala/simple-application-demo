@@ -33,7 +33,12 @@ Public Class LoginAuthentication
         Me.Hide()
     End Sub
 
-    Private Sub authpassTxt_TextChanged(sender As Object, e As EventArgs)
-
+    Private Sub authconfirmpassTxt_KeyDown(sender As Object, e As KeyEventArgs) Handles authconfirmpassTxt.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            btnLogin_Click(Nothing, Nothing)
+        Else
+            Exit Sub
+        End If
+        e.SuppressKeyPress = True
     End Sub
 End Class

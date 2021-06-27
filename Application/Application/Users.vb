@@ -107,4 +107,13 @@ Public Class Users
     Private Sub createconfirmpassTxt_TextChanged(sender As Object, e As EventArgs) Handles createconfirmpassTxt.TextChanged, createpasswordTxt.TextChanged
 
     End Sub
+
+    Private Sub createusersidTxt_KeyDown(sender As Object, e As KeyEventArgs) Handles createusersidTxt.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            searchuseridBtn_Click(Nothing, Nothing)
+        Else
+            Exit Sub
+        End If
+        e.SuppressKeyPress = True
+    End Sub
 End Class
