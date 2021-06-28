@@ -3,18 +3,18 @@ Public Class Connection
     Private constring As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Desktop\Desktop\demo-project\Application\Application\Database1.mdf;Integrated Security=True"
     Public con As New SqlConnection(constring)
 
-    'Public variables for Products
-    Public productid As Integer
-    Public productname As String
-    Public productquantity As String
-    Public productdescript As String
-    Public productcategory As String
+    'Public property variables for Products
+    Public Property productid As Integer
+    Public Property productname As String
+    Public Property productquantity As String
+    Public Property productdescript As String
+    Public Property productcategory As String
 
-    'Public variables for Users
-    Public uid As Integer
-    Public username As String
-    Public password As String
-    Public confirmpassword As String
+    'Public property variables for Users
+    Public Property uid As Integer
+    Public Property username As String
+    Public Property password As String
+    Public Property confirmpassword As String
 
     Public Sub createProduct()
         con.Open()
