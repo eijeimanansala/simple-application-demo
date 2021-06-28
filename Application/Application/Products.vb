@@ -90,7 +90,6 @@ Public Class Products
         connection.productquantity = pquantity
         connection.productdescript = pdescription
         connection.productcategory = pcategory
-
         connection.createProduct()
 
         productidTxt.Clear()

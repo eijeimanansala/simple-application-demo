@@ -15,3 +15,4 @@ C:\Users\Desktop\Desktop\demo-project\Application\Application\obj\Debug\Applicat
 C:\Users\Desktop\Desktop\demo-project\Application\Application\obj\Debug\Application.xml
 C:\Users\Desktop\Desktop\demo-project\Application\Application\obj\Debug\Application.pdb
 C:\Users\Desktop\Desktop\demo-project\Application\Application\obj\Debug\Application.MainMenu.resources
+C:\Users\Desktop\Desktop\demo-project\Application\Application\obj\Debug\Application.vbprojResolveAssemblyReference.cache
