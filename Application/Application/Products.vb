@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class Products
-    Dim connection As New Connection
+    Dim product As New Product
     Dim pid As String
     Dim pname As String
     Dim pquantity As String
@@ -25,8 +25,8 @@ Public Class Products
     Private Sub productdeleteBtn_Click(sender As Object, e As EventArgs) Handles productdeleteBtn.Click
         If MessageBox.Show("Are you sure do you to delete?", "Delete Data", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             pid = productidTxt.Text
-            connection.productid = pid
-            connection.deleteProduct()
+            product.productid = pid
+            product.deleteProduct()
             LoadDataInGrid()
             productidTxt.Clear()
         End If
@@ -40,13 +40,13 @@ Public Class Products
     Private Sub searchproductidBtn_Click(sender As Object, e As EventArgs) Handles searchproductidBtn.Click
         pid = productidTxt.Text
         If pid = "" Then
-            Dim command As New SqlCommand("SELECT * FROM PRODUCTS", connection.con)
+            Dim command As New SqlCommand("SELECT * FROM PRODUCTS", product.con)
             Dim sda As New SqlDataAdapter(command)
             Dim dt As New DataTable
             sda.Fill(dt)
             DataGridView1.DataSource = dt
         Else
-            Dim command As New SqlCommand("SELECT * FROM PRODUCTS WHERE ProductID = '" & pid & "' ", connection.con)
+            Dim command As New SqlCommand("SELECT * FROM PRODUCTS WHERE ProductID = '" & pid & "' ", product.con)
             Dim sda As New SqlDataAdapter(command)
             Dim dt As New DataTable
             sda.Fill(dt)
@@ -85,18 +85,17 @@ Public Class Products
         pdescription = productdescriptionTxt.Text
         pcategory = productcategory.Text
 
-        connection.productid = pid
-        connection.productname = pname
-        connection.productquantity = pquantity
-        connection.productdescript = pdescription
-        connection.productcategory = pcategory
-        connection.createProduct()
+        product.productid = pid
+        product.productname = pname
+        product.productquantity = pquantity
+        product.productdescript = pdescription
+        product.productcategory = pcategory
+        product.createProduct()
 
         productidTxt.Clear()
         productnameTxt.Clear()
         productquantityTxt.Clear()
         productdescriptionTxt.Clear()
-        productcategory.Items.Clear()
     End Sub
     'Update Product Sub Class
     Private Sub updatedProduct()
@@ -106,22 +105,25 @@ Public Class Products
         pdescription = productdescriptionTxt.Text
         pcategory = productcategory.Text
 
-        connection.productid = pid
-        connection.productname = pname
-        connection.productquantity = pquantity
-        connection.productdescript = pdescription
-        connection.productcategory = pcategory
-        connection.updateProduct()
+        product.productid = pid
+        product.productname = pname
+        product.productquantity = pquantity
+        product.productdescript = pdescription
+        product.productcategory = pcategory
 
-        productidTxt.Clear()
-        productnameTxt.Clear()
-        productquantityTxt.Clear()
-        productdescriptionTxt.Clear()
-        productcategory.Items.Clear()
+        If productidTxt.Text = "" Or productnameTxt.Text = "" Or productquantityTxt.Text = "" Or productdeleteBtn.Text = "" Or productcategory.Text = "" Then
+            MessageBox.Show("All fields are required!")
+        Else
+            product.updateProduct()
+            productidTxt.Clear()
+            productnameTxt.Clear()
+            productquantityTxt.Clear()
+            productdescriptionTxt.Clear()
+        End If
     End Sub
     'Load Data in Grind sub class
     Private Sub LoadDataInGrid()
-        Dim command As New SqlCommand("Select * from Products", connection.con)
+        Dim command As New SqlCommand("Select * from Products", product.con)
         Dim sda As New SqlDataAdapter(command)
         Dim dt As New DataTable
         sda.Fill(dt)

@@ -175,7 +175,7 @@ Partial Class Products
         Me.productcategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.productcategory.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.productcategory.FormattingEnabled = True
-        Me.productcategory.Items.AddRange(New Object() {"Fish", "Meat", "Vegetables", "Fruits"})
+        Me.productcategory.Items.AddRange(New Object() {"Fish", "Meat", "Vegetables", "Fruits", "Drinks", "Condiments"})
         Me.productcategory.Location = New System.Drawing.Point(177, 273)
         Me.productcategory.Name = "productcategory"
         Me.productcategory.Size = New System.Drawing.Size(187, 23)

@@ -2,23 +2,21 @@
 Public Class Connection
     Private constring As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Desktop\Desktop\demo-project\Application\Application\Database1.mdf;Integrated Security=True"
     Public con As New SqlConnection(constring)
+End Class
+
+Public Class Product
+    Inherits Connection
 
     'Public property variables for Products
-    Public Property productid As Integer
+    Public Property productid As String
     Public Property productname As String
     Public Property productquantity As String
     Public Property productdescript As String
     Public Property productcategory As String
 
-    'Public property variables for Users
-    Public Property uid As Integer
-    Public Property username As String
-    Public Property password As String
-    Public Property confirmpassword As String
-
     Public Sub createProduct()
         con.Open()
-        Dim command As New SqlCommand("Insert into Products Values (@pid, @productname, @productquantity, @productdescript, @productcategory)", con)
+        Dim command As New SqlCommand("INSERT INTO Products VALUES (@pid, @productname, @productquantity, @productdescript, @productcategory)", con)
         command.Parameters.AddWithValue("@pid", productid)
         command.Parameters.AddWithValue("@productname", productname)
         command.Parameters.AddWithValue("@productquantity", productquantity)
@@ -31,11 +29,11 @@ Public Class Connection
 
     Public Sub updateProduct()
         con.Open()
-        Dim command As New SqlCommand("Update Products SET ProductName= @productname, Quantity = @productquantity, Description = @productdescription, Category = @productcategory WHERE ProductID = @pid ", con)
+        Dim command As New SqlCommand("UPDATE Products SET ProductName= @productname, Quantity = @productquantity, Description = @productdescription, Category = @productcategory WHERE ProductID = @pid ", con)
         command.Parameters.AddWithValue("@pid", productid)
         command.Parameters.AddWithValue("@productname", productname)
         command.Parameters.AddWithValue("@productquantity", productquantity)
-        command.Parameters.AddWithValue("@productdescript", productdescript)
+        command.Parameters.AddWithValue("@productdescription", productdescript)
         command.Parameters.AddWithValue("@productcategory", productcategory)
         command.ExecuteNonQuery()
         con.Close()
@@ -44,12 +42,23 @@ Public Class Connection
 
     Public Sub deleteProduct()
         con.Open()
-        Dim command As New SqlCommand("Delete Products where ProductID = @pid ", con)
+        Dim command As New SqlCommand("DELETE Products WHERE ProductID = @pid ", con)
         command.Parameters.AddWithValue("@pid", productid)
         command.ExecuteNonQuery()
         MessageBox.Show("Successfully Deleted")
         con.Close()
     End Sub
+End Class
+
+
+Public Class User
+    Inherits Connection
+
+    'Public property variables for Users
+    Public Property uid As String
+    Public Property username As String
+    Public Property password As String
+    Public Property confirmpassword As String
 
     Public Sub addUser()
         con.Open()
@@ -64,7 +73,7 @@ Public Class Connection
 
     Public Sub updateUser()
         con.Open()
-        Dim command As New SqlCommand("UPDATE USERS SET Username = @username, Password = @password, ConfirmPassword = @confirmpassword WHERE UserID = @userid" & uid & "'", con)
+        Dim command As New SqlCommand("UPDATE Users SET Username = @username, Password = @password, ConfirmPassword = @confirmpassword WHERE UserID = @userid ", con)
         command.Parameters.AddWithValue("@userid", uid)
         command.Parameters.AddWithValue("@username", username)
         command.Parameters.AddWithValue("@password", password)

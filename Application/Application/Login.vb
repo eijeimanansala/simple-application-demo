@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class Login
-    Dim connection As New Connection
+    Dim user As New User
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
@@ -14,7 +14,7 @@ Public Class Login
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim username As String = usernameTxt.Text
         Dim pass As String = passwordTxt.Text
-        Dim command As New SqlCommand("SELECT * FROM Users WHERE Username = '" & username & "' and Password = '" & pass & "' ", connection.con)
+        Dim command As New SqlCommand("SELECT * FROM Users WHERE Username = '" & username & "' and Password = '" & pass & "' ", user.con)
         Dim sda As New SqlDataAdapter(command)
         Dim dt As New DataTable
         sda.Fill(dt)
