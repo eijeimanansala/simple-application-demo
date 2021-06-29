@@ -5,6 +5,7 @@ Public Class Users
     Dim uname As String
     Dim pass As String
     Dim confirmpass As String
+    Dim index As Integer
 
     Private Sub Users_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'Database1DataSet.Users' table. You can move, or remove it, as needed.
@@ -22,6 +23,11 @@ Public Class Users
             uid = createusersidTxt.Text
             user.uid = uid
             user.deleteUser()
+
+            createusersidTxt.Clear()
+            createusernameTxt.Clear()
+            createpasswordTxt.Clear()
+            createconfirmpassTxt.Clear()
             LoadDataInGrid()
         End If
     End Sub
@@ -122,5 +128,15 @@ Public Class Users
             Exit Sub
         End If
         e.SuppressKeyPress = True
+    End Sub
+
+    Private Sub DataGridView2_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellClick
+        index = e.RowIndex
+        Dim selectedRow As DataGridViewRow
+        selectedRow = DataGridView2.Rows(index)
+        createusersidTxt.Text = selectedRow.Cells(0).Value.ToString()
+        createusernameTxt.Text = selectedRow.Cells(1).Value.ToString()
+        createpasswordTxt.Text = selectedRow.Cells(2).Value.ToString()
+        createconfirmpassTxt.Text = selectedRow.Cells(3).Value.ToString()
     End Sub
 End Class

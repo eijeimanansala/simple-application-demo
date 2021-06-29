@@ -6,6 +6,7 @@ Public Class Products
     Dim pquantity As String
     Dim pdescription As String
     Dim pcategory As String
+    Dim index As Integer
 
     Private Sub addproductBtn_Click(sender As Object, e As EventArgs) Handles addproductBtn.Click
         addProduct()
@@ -24,11 +25,7 @@ Public Class Products
 
     Private Sub productdeleteBtn_Click(sender As Object, e As EventArgs) Handles productdeleteBtn.Click
         If MessageBox.Show("Are you sure do you to delete?", "Delete Data", MessageBoxButtons.YesNo) = DialogResult.Yes Then
-            pid = productidTxt.Text
-            product.productid = pid
-            product.deleteProduct()
-            LoadDataInGrid()
-            productidTxt.Clear()
+            deleteProduct()
         End If
     End Sub
 
@@ -119,7 +116,21 @@ Public Class Products
             productnameTxt.Clear()
             productquantityTxt.Clear()
             productdescriptionTxt.Clear()
+            productcategory.SelectedItem = Nothing
         End If
+    End Sub
+    'Delete Product Sub Class
+    Private Sub deleteProduct()
+        pid = productidTxt.Text
+        product.productid = pid
+        product.deleteProduct()
+        LoadDataInGrid()
+
+        productidTxt.Clear()
+        productnameTxt.Clear()
+        productquantityTxt.Clear()
+        productdescriptionTxt.Clear()
+        productcategory.SelectedItem = Nothing
     End Sub
     'Load Data in Grind sub class
     Private Sub LoadDataInGrid()
@@ -137,5 +148,16 @@ Public Class Products
             Exit Sub
         End If
         e.SuppressKeyPress = True
+    End Sub
+
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        index = e.RowIndex
+        Dim selectedRow As DataGridViewRow
+        selectedRow = DataGridView1.Rows(index)
+        productidTxt.Text = selectedRow.Cells(0).Value.ToString()
+        productnameTxt.Text = selectedRow.Cells(1).Value.ToString()
+        productquantityTxt.Text = selectedRow.Cells(2).Value.ToString()
+        productdescriptionTxt.Text = selectedRow.Cells(3).Value.ToString()
+        productcategory.SelectedItem = selectedRow.Cells(4).Value.ToString()
     End Sub
 End Class
